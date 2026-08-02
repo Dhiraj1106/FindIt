@@ -3,7 +3,6 @@ package org.example.database;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 public class DBConnection {
     private static final String URL = "jdbc:mysql://localhost:3306/FindIt";
@@ -11,9 +10,9 @@ public class DBConnection {
     private static final String PASSWORD = "vortex11";
 
     public static Connection getConnection() {
+        Connection con = null;
         try {
-            Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
-            Statement stmt = con.createStatement();
+            con = DriverManager.getConnection(URL, USER, PASSWORD);
             System.out.println("✅ Database Connected Successfully!");
 
 
@@ -22,8 +21,7 @@ public class DBConnection {
             e.printStackTrace();
 
         }
-        return null;
-
+        return con;
 
 
     }
