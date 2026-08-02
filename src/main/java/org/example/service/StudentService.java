@@ -10,6 +10,12 @@ public class StudentService {
     public boolean registerStudent(Student student) {
 
         return studentDAO.registerStudent(student);
+    }
+
+    public Student loginStudent(String email, String password) {
+
+        return studentDAO.loginStudent(email, password);
 
     }
-}
+
+    }

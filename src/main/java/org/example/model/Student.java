@@ -6,17 +6,19 @@ public class Student {
     private String studentName;
     private String email;
     private String phone;
+    private String password;
 
     // Default Constructor
     public Student() {
     }
 
     // Parameterized Constructor
-    public Student(int studentId, String studentName, String email, String phone) {
+    public Student(int studentId, String studentName, String email, String phone,String password) {
         this.studentId = studentId;
         this.studentName = studentName;
         this.email = email;
         this.phone = phone;
+        this.password = password;
     }
 
     // Getters
@@ -53,6 +55,14 @@ public class Student {
         this.phone = phone;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
@@ -60,6 +70,7 @@ public class Student {
                 ", studentName='" + studentName + '\'' +
                 ", email='" + email + '\'' +
                 ", phone='" + phone + '\'' +
+                ", password='" + password + '\'' +
                 '}';
     }
 }
