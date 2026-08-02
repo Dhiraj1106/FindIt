@@ -283,6 +283,7 @@ public class Menu {
         }
 
     }
+
     private void adminDashboard() {
 
         while(true){
@@ -303,7 +304,7 @@ public class Menu {
             switch(choice){
 
                 case 1:
-                    System.out.println("View Reports Coming Soon...");
+                    adminService.viewAllReports();
                     break;
 
                 case 2:

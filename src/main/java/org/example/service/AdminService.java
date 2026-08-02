@@ -7,10 +7,11 @@ public class AdminService {
 
     private AdminDAO adminDAO = new AdminDAO();
 
-    public Admin loginAdmin(String username, String password){
-
-        return adminDAO.loginAdmin(username,password);
-
+    public Admin loginAdmin(String username, String password) {
+        return adminDAO.loginAdmin(username, password);
     }
 
+    public void viewAllReports() {
+        adminDAO.viewAllReports();
+    }
 }
